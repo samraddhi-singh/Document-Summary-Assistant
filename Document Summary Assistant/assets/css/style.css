@@ -1,0 +1,156 @@
+/* =========================================
+   Global Variables
+========================================= */
+:root {
+  --bg: #0b0f14;
+  --card: #10161d;
+  --text: #e5e7eb;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border: #1f2937;
+  --danger: #dc2626;
+  --radius: 12px;
+  --font: "Inter", system-ui, sans-serif;
+}
+
+/* =========================================
+   Base Layout
+========================================= */
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: #111827;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* =========================================
+   Card Component
+========================================= */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #f3f4f6;
+}
+
+/* =========================================
+   Buttons
+========================================= */
+.btn {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+.btn.secondary {
+  background: #374151;
+}
+
+.btn.secondary:hover {
+  background: #4b5563;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+/* =========================================
+   Drop Zone
+========================================= */
+.drop-zone {
+  border: 2px dashed var(--accent);
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  color: #9ca3af;
+  transition: background 0.2s;
+}
+
+.drop-zone.dragover {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: var(--accent-hover);
+  color: #dbeafe;
+}
+
+/* =========================================
+   Textareas
+========================================= */
+textarea {
+  width: 100%;
+  min-height: 120px;
+  margin-top: 1rem;
+  background: #111827;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem;
+  resize: vertical;
+  font-family: var(--font);
+  font-size: 0.95rem;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* =========================================
+   Status Bar
+========================================= */
+#status {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #93c5fd;
+}
+
+/* =========================================
+   Footer
+========================================= */
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  color: #9ca3af;
+  font-size: 0.85rem;
+}

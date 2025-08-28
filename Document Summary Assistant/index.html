@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Summary Assistant</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Document Summary Assistant</h1>
+  </header>
+
+  <main class="container">
+    <!-- Upload Section -->
+    <section class="card">
+      <h2>Upload & Extract</h2>
+      <div id="dropZone" class="drop-zone">
+        <p>Drag & drop a PDF/JPG/PNG here or</p>
+        <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png">
+      </div>
+      <div class="btn-row">
+        <button class="btn" onclick="extract()">Extract Text</button>
+        <button class="btn secondary" onclick="resetAll()">Reset</button>
+      </div>
+      <div id="status"></div>
+    </section>
+
+    <div class="card">
+  <h2>Extracted Text</h2>
+  <textarea id="summary" placeholder="Your extracted text will appear here..."></textarea>
+</div>
+
+
+    <!-- Summary Section -->
+    <section class="card">
+      <h2>Summary</h2>
+      <div class="btn-row">
+        <button class="btn" onclick="summarize('short')">Short</button>
+        <button class="btn" onclick="summarize('medium')">Medium</button>
+        <button class="btn" onclick="summarize('long')">Long</button>
+      </div>
+      <textarea id="summaryOutput" placeholder="Summary will appear here..."></textarea>
+      <div class="btn-row">
+        <button class="btn secondary" onclick="copySummary()">Copy</button>
+        <button class="btn secondary" onclick="downloadSummary()">Download</button>
+      </div>
+    </section>
+
+    <!-- Suggestions -->
+    <section class="card">
+      <h2>Improvement Suggestions</h2>
+      <textarea id="suggestionsOutput" readonly></textarea>
+    </section>
+
+    <!-- Notes & Docs -->
+    <section class="card">
+      <h2>Notes & Docs</h2>
+      <p>Diagnostics and documentation will appear here.</p>
+      <div class="btn-row">
+        <button class="btn" onclick="runSelfTest()">Self-test</button>
+        <button class="btn" onclick="runUnitTests()">Unit tests</button>
+        <button class="btn secondary" onclick="loadDemo()">Load Demo</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>Built for the Technical Assessment: Document Summary Assistant</footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/summarize.js"></script>
+  <script src="assets/js/extract.js"></script>
+  <script src="assets/js/tests.js"></script>
+  <script src="assets/js/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
